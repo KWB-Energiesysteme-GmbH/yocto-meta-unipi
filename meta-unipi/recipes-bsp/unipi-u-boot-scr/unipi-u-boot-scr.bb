@@ -11,6 +11,8 @@ DEPENDS = "u-boot-mkimage-native"
 
 SRC_URI = "file://boot.cmd.in"
 
+S = "${UNPACKDIR}"
+
 BOOT_MEDIA ?= "mmc"
 
 do_compile() {

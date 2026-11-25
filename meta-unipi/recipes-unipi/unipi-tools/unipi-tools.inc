@@ -11,7 +11,6 @@ DEPENDS = "libmodbus (>=3.1.4) \
 
 inherit autotools gettext pkgconfig ${@bb.utils.contains('DISTRO_FEATURES', 'systemd', 'systemd', 'update-rc.d', d)}
 
-S = "${WORKDIR}/git"
 EXTRA_OEMAKE = " PROJECT_VERSION=${PV}"
 
 # split into packages

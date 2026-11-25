@@ -3,6 +3,7 @@ From: Miroslav Ondra <ondra@faster.cz>
 Date: Thu, 15 May 2025 01:48:28 +0200
 Subject: [PATCH 3/3] serial: amba-pl011: Add mctrl_gpio
 
+Upstream-Status: Pending
 ---
  drivers/tty/serial/amba-pl011.c | 30 ++++++++++++++++++++++++++----
  1 file changed, 26 insertions(+), 4 deletions(-)

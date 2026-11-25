@@ -16,8 +16,6 @@ SRC_URI:unipi_neuron = "git://github.com/UniPiTechnology/os-configurator-data-ne
 
 inherit systemd pkgconfig
 
-S = "${WORKDIR}/git"
-
 # split into packages
 PACKAGES =+ " unipi-os-configurator-data-base unipi-os-configurator-data-auto"
 #RDEPENDS:${PN}-auto = "unipi-os-configurator-data-base"

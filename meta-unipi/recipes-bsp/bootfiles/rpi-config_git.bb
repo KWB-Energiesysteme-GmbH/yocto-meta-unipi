@@ -11,7 +11,7 @@ COMPATIBLE_MACHINE:unipi_neuron = "unipi_neuron"
 
 SRC_URI = "file://config.txt"
 
-S = "${WORKDIR}"
+S = "${UNPACKDIR}"
 
 INHIBIT_DEFAULT_DEPS = "1"
 

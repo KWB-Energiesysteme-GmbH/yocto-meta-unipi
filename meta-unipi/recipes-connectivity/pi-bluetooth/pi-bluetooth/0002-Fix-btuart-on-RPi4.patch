@@ -3,6 +3,7 @@ From: Miroslav Ondra <ondra@faster.cz>
 Date: Mon, 10 Feb 2025 14:23:21 +0100
 Subject: [PATCH] Fix btuart on RPi4
 
+Upstream-Status: Pending
 ---
  usr/bin/btuart | 1 +
  1 file changed, 1 insertion(+)

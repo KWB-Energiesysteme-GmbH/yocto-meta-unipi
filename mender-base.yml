@@ -4,7 +4,8 @@ header:
 repos:
   meta-mender:
     url: https://github.com/mendersoftware/meta-mender.git
-    commit: 4ae8e962a3c011cfc4d9e4b85878c226b2763b0c
+    branch: wrynose
+    commit: 1b0a813e630a335acff12daff0da2e0aa59b191b
     path: layers/meta-mender
 
     layers:

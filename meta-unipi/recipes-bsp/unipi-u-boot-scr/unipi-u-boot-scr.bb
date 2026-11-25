@@ -11,6 +11,8 @@ DEPENDS = "u-boot-mkimage-native"
 
 SRC_URI = "file://boot.cmd.in"
 
+S = "${UNPACKDIR}"
+
 BOOT_MEDIA ?= "mmc"
 
 do_compile() {
@@ -19,7 +21,7 @@ do_compile() {
         -e 's/@@U_BOOT_OVERLAYS@@/${U_BOOT_OVERLAYS}/' \
         -e 's/@@BOOT_MEDIA@@/${BOOT_MEDIA}/' \
         -e 's#@@BOOTARGS@@#${U_BOOT_SCR_BOOTARGS}#' \
-        "${WORKDIR}/boot.cmd.in" > "${WORKDIR}/boot.cmd"
+        "${UNPACKDIR}/boot.cmd.in" > "${WORKDIR}/boot.cmd"
     mkimage -A ${UBOOT_ARCH} -T script -C none -n "Boot script" -d "${WORKDIR}/boot.cmd" boot.scr
 }
 

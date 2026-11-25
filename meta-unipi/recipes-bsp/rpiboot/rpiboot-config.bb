@@ -12,7 +12,7 @@ do_configure[noexec] = "1"
 do_install[noexec] = "1"
 
 do_compile() {
-    cat "${WORKDIR}/config.txt.in" > ${B}/config.txt
+    cat "${UNPACKDIR}/config.txt.in" > ${B}/config.txt
 }
 
 do_deploy() {

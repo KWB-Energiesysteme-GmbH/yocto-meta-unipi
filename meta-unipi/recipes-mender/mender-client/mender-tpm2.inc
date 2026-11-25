@@ -6,11 +6,11 @@ SRC_URI:append = " file://ssl-tpm2.cnf \
 
 do_install:append() {
     if echo "${XMENDER_AUTH_PRIVATE_KEY}" | grep -q 'handle:'; then
-        install -m 644 -D ${WORKDIR}/ssl-tpm2.cnf ${D}${sysconfdir}/ssl/ssl-tpm2.cnf
-        install -m 644 -D ${WORKDIR}/tpm2-override.conf ${D}${sysconfdir}/systemd/system/mender-authd.service.d/tpm2-override.conf
+        install -m 644 -D ${UNPACKDIR}/ssl-tpm2.cnf ${D}${sysconfdir}/ssl/ssl-tpm2.cnf
+        install -m 644 -D ${UNPACKDIR}/tpm2-override.conf ${D}${sysconfdir}/systemd/system/mender-authd.service.d/tpm2-override.conf
     fi
     if echo "${XMENDER_AUTH_PRIVATE_KEY}" | grep -q 'r2k:'; then
-        install -m 644 -D ${WORKDIR}/agent-key.conf ${D}${sysconfdir}/systemd/system/mender-authd.service.d/agent-key.conf
+        install -m 644 -D ${UNPACKDIR}/agent-key.conf ${D}${sysconfdir}/systemd/system/mender-authd.service.d/agent-key.conf
     fi
 }
 

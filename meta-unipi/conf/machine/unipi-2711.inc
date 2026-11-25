@@ -16,7 +16,7 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "${@bb.utils.contains('RPI_USE_U_BOOT', '1',
 
 
 # rpi-base.inc expects no RTC, but this machine has one
-MACHINE_FEATURES_BACKFILL_CONSIDERED:remove = "rtc"
+MACHINE_FEATURES_OPTED_OUT:remove = "rtc"
 
 ## clear some defaults from MACHINE_FEATURES
 ## this removes packagegroup-base-wifi... from RDEPENDS:packagegroup-base

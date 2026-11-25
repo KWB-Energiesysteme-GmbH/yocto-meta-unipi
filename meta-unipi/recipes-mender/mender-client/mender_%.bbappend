@@ -9,9 +9,9 @@ RDEPENDS:mender-update:append = "${@bb.utils.contains('RPI_USE_U_BOOT', '1', ' l
 
 # add inventory scripts for cpuinfo
 do_install:append() {
-    install -m 755 ${WORKDIR}/mender-inventory-cpuinfo ${D}${datadir}/mender/inventory/mender-inventory-cpuinfo
+    install -m 755 ${UNPACKDIR}/mender-inventory-cpuinfo ${D}${datadir}/mender/inventory/mender-inventory-cpuinfo
     if [ "${XMENDER_UNIPI_IDENTITY}" = "1" ]; then
-        install -m 755 ${WORKDIR}/mender-device-identity ${D}${datadir}/mender/identity/mender-device-identity
+        install -m 755 ${UNPACKDIR}/mender-device-identity ${D}${datadir}/mender/identity/mender-device-identity
     fi
 }
 

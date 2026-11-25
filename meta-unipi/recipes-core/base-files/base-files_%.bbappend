@@ -8,12 +8,12 @@ SRC_URI:append:rpi = " file://fstab.in \
 # UNIPI_FSTAB = "1"
 
 do_compile:append() {
-    sed "s/@@FSTAB_ROOT_OPTS@@/${UNIPI_FSTAB_ROOT_OPTS}/" ${WORKDIR}/fstab.in > ${WORKDIR}/fstab
+    sed "s/@@FSTAB_ROOT_OPTS@@/${UNIPI_FSTAB_ROOT_OPTS}/" ${UNPACKDIR}/fstab.in > ${S}/fstab
 }
 
 do_compile:append:rpi() {
     if [ "${UNIPI_FSTAB}" = "1" ]; then
-        cat ${WORKDIR}/fstab.rpi.append >> ${WORKDIR}/fstab
+        cat ${UNPACKDIR}/fstab.rpi.append >> ${S}/fstab
     fi
 }
 

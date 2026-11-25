@@ -27,7 +27,7 @@ do_compile() {
     sed -e "s#@@UNIPI_EOL_IMAGENAME_CMD@@#${UNIPI_EOL_IMAGENAME_CMD}#" \
         -e "s#@@UNIPI_EOL_IMAGEVERSION_CMD@@#${UNIPI_EOL_IMAGEVERSION_CMD}#" \
         -e "s#@@UNIPI_EOL_POSTEXEC_CMD@@#${UNIPI_EOL_POSTEXEC_CMD}#" \
-        "${WORKDIR}/image-info.service.in" > image-info.service
+        "${UNPACKDIR}/image-info.service.in" > image-info.service
 }
 
 do_install() {

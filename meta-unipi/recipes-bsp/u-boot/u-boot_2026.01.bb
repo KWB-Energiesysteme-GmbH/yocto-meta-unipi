@@ -12,8 +12,8 @@ SRC_URI = "git://source.denx.de/u-boot/u-boot.git;protocol=https;branch=master;n
 SRC_URI:remove:rpi = " file://0001-rpi-always-set-fdt_addr-with-firmware-provided-FDT-address.patch"
 
 do_patch_uboot () {
-    cd "${WORKDIR}/unipi" && cp -r unipi/* "${S}"
-    cd "${S}" && find "${WORKDIR}/unipi/patches-u" -name \*.patch -exec patch -p 1 -i \{\} \;
+    cd "${UNPACKDIR}/unipi" && cp -r unipi/* "${S}"
+    cd "${S}" && find "${UNPACKDIR}/unipi/patches-u" -name \*.patch -exec patch -p 1 -i \{\} \;
 }
 
 addtask do_patch_uboot before do_patch after do_unpack
